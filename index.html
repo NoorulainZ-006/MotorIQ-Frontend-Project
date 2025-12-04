@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MotorIQ — Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="header">
+<div class="logo">
+<img src="images/logo.png" alt="MotorIQ Logo" />
+<h3>MotorIQ</h3>
+</div>
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="cars.html">Cars</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+    <button class="mobile-toggle">☰</button>
+  </header>
+
+  <!-- HERO -->
+<section id="hero" class="hero">
+<div class="hero-content" style="text-align: center;" >
+  <h1>MotorIQ</h1>
+<h1>Your Ultimate Car Information Hub</h1>
+<p>Explore the world of automobiles with power, style & technology.</p>
+<button onclick="goToCars()" class="btn">Explore Cars</button>
+</div>
+</section>
+
+      <!-- 3 info boxes -->
+       <h2 style="text-align: center; margin-top: 50px;font-size:32px;margin-bottom:20px; " >About our Services</h2>
+      <div class="info-row" style="margin-top:28px">
+        
+        <div class="info-card">
+          <h3>Vehicle Specifications</h3>
+          <p>Engine specs, power, torque, fuel type & performance figures for major models.</p>
+        </div>
+
+        <div class="info-card">
+          <h3>Price & Ownership Cost</h3>
+          <p>Approximate cost, maintenance expectations and fuel efficiency estimates.</p>
+        </div>
+
+        <div class="info-card">
+          <h3>Reviews & Comparisons</h3>
+          <p>Expert reviews, comparisons and recommended alternatives across budgets.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cars preview section -->
+  <section class="section container" id="cars-preview">
+    <h2 style="font-size:32px;margin-bottom:20px;">Popular Cars</h2>
+    <p class="lead">Click any car to see full details: specs, images and price estimate.</p>
+
+    <div class="cars-grid">
+      <!-- 6 sample cards shown; rest in cars.html -->
+      <a href="car-porsche-911.html" class="car-card">
+        <img src="images/porsche.jpg" alt="Porsche 911" />
+        <div class="card-body">
+          <h4>Porsche 911</h4>
+          <div class="meta">Eff: 8.5 km/l • Est cost: $120,000</div>
+        </div>
+      </a>
+
+      <a href="car-lamborghini-aventador.html" class="car-card">
+        <img src="images/lamborghini.jpg" alt="Lamborghini" />
+        <div class="card-body">
+          <h4>Lamborghini Aventador</h4>
+          <div class="meta">Eff: 5 km/l • Est cost: $400,000</div>
+        </div>
+      </a>
+
+      <a href="car-bmw-m4.html" class="car-card">
+        <img src="images/bmw.jpg" alt="BMW M4" />
+        <div class="card-body">
+          <h4>BMW M4</h4>
+          <div class="meta">Eff: 9 km/l • Est cost: $75,000</div>
+        </div>
+      </a>
+
+
+      <!-- add two more previews -->
+      <a href="car-audi-r8.html" class="car-card">
+        <img src="images/audi.jpg" alt="Audi R8" />
+        <div class="card-body">
+          <h4>Audi R8</h4>
+          <div class="meta">Eff: 7 km/l • Est cost: $170,000</div>
+        </div>
+      </a>
+
+      <a href="car-mercedes-amg-gt.html" class="car-card">
+        <img src="images/mercedes.png" alt="Mercedes AMG GT" />
+        <div class="card-body">
+          <h4>Mercedes AMG GT</h4>
+          <div class="meta">Eff: 8 km/l • Est cost: $140,000</div>
+        </div>
+      </a>
+      
+
+    </div>
+  </section>
+<!-- REVIEW SECTION -->
+<section class="reviews" style="padding:40px 20px;text-align:center;">
+<h2 style="font-size:32px;margin-bottom:20px;">Customer Reviews</h2>
+<div class="review-container" style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap;">
+
+
+<div class="review-box" style="width:300px;padding:20px;border-radius:10px;background:#fff;box-shadow:0 0 12px rgba(0,0,0,0.15);text-align:left;">
+<h3 style="font-size:20px;margin-bottom:5px;">Ayyan Khan</h3>
+<p style="color:#f4c430;font-size:20px;">★★★★★</p>
+<p style="margin-top:8px;color:#444;">Best car info website! Very clean and easy to understand.</p>
+</div>
+
+
+<div class="review-box" style="width:300px;padding:20px;border-radius:10px;background:#fff;box-shadow:0 0 12px rgba(0,0,0,0.15);text-align:left;">
+<h3 style="font-size:20px;margin-bottom:5px;">Hamza Ali</h3>
+<p style="color:#f4c430;font-size:20px;">★★★★☆</p>
+<p style="margin-top:8px;color:#444;">Loved the UI and car details section. Very helpful!</p>
+</div>
+
+
+<div class="review-box" style="width:300px;padding:20px;border-radius:10px;background:#fff;box-shadow:0 0 12px rgba(0,0,0,0.15);text-align:left;">
+<h3 style="font-size:20px;margin-bottom:5px;">Sara Malik</h3>
+<p style="color:#f4c430;font-size:20px;">★★★★★</p>
+<p style="margin-top:8px;color:#444;">Accurate pricing and mileage info. Highly recommended!</p>
+</div>
+
+<div class="review-box" style="width:300px;padding:20px;border-radius:10px;background:#fff;box-shadow:0 0 12px rgba(0,0,0,0.15);text-align:left;">
+<h3 style="font-size:20px;margin-bottom:5px;">Ali Haider</h3>
+<p style="color:#f4c430;font-size:20px;">★★★★☆</p>
+<p style="margin-top:8px;color:#444;">Car details are amazing and quite helpful.</p>
+</div>
+
+
+</div>
+</section>
+  <!-- FOOTER -->
+  <footer>
+<footer class="footer">
+<div class="social">
+  <a href="https://www.youtube.com/" target="_blank">YouTube</a>
+        <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+        <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+      </div>
+<p>© 2025 MotorIQ | All Rights Reserved</p>
+</footer>
+</body>
+</html>
+
+  <script src="script.js"></script>
+</body>
+</html>

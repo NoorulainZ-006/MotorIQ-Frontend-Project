@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Landing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #0d0d0d;
+            font-family: "Poppins", sans-serif;
+        }
+
+        /* Header */
+        header {
+            width: 100%;
+            height: 70px;
+            background-color: #0d0d0d;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 60px;
+            height: 50px;
+            margin-right: 10px;
+        }
+        .logo h3 {
+            color: #c71922;
+            font-size: 1.5rem;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            color: #c71922;
+        }
+
+        .btn {
+            background-color: transparent;
+            border: 2px solid #c71922;
+            color: #c71922;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background-color: #c71922;
+            color: #0d0d0d;
+        }
+
+        /* Hero Section */
+        #hero {
+            height: 400px;
+            background-image: url('images/porsche.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+        #hero::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(202, 25, 34, 0.6); /* subtle red tint */
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .hero-content h1,
+        .hero-content p,
+        .hero-content .btn1 {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeSlideUp 1s ease forwards;
+        }
+        .hero-content h1 { animation-delay: 0.3s; }
+        .hero-content p { animation-delay: 0.6s; }
+        .hero-content .btn1 { animation-delay: 0.9s; }
+
+        @keyframes fadeSlideUp {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .btn1 {
+            background-color: #c71922;
+            border: none;
+            padding: 10px 20px;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn1:hover {
+            background-color: #0d0d0d;
+            color: #c71922;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="images/logo.png" alt="Site Logo">
+        <h3>BrandName</h3>
+    </div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+    <button class="btn">Get Started</button>
+</header>
+
+<section id="hero">
+    <div class="hero-content">
+        <h1>Welcome to Our Site</h1>
+        <p>Professional. Clean. Ready for you.</p>
+        <button class="btn1">Learn More</button>
+    </div>
+</section>
+
+</body>
+</html>
+
+
+---------------------------------------------------------------------------------------------
+<script>
+window.addEventListener("scroll", function () {
+    const header = document.querySelector("header");
+    if (window.scrollY > 70) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+});
+</script>
+
+----------------------------------------------------------------------------------------
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #0d0d0d;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+    width: 100%;
+    height: 70px;
+    background-color: #0d0d0d;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    transition: 0.3s;
+}
+
+header.scrolled {
+    height: 55px;
+    background-color: #0a0a0a;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+}
+
+.logo img {
+    width: 60px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+/* Nav links */
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #c71922;
+}
+
+nav a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #c71922;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Main Button */
+.btn {
+    background-color: transparent;
+    border: 2px solid #c71922;
+    color: #c71922;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+}
+.btn:hover {
+    background-color: #c71922;
+    color: #0d0d0d;
+    transform: scale(1.05);
+}
+
+.btn:active::after {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    background: rgba(255,255,255,0.25);
+    top: -50%;
+    left: -50%;
+    transform: scale(0);
+    animation: ripple 0.5s linear;
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+/* Hero Section */
+#hero {
+    height: 500px;
+    background-image: url('images/porsche.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+#hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(202, 25, 34, 0.55);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    transform: scale(0.9);
+    opacity: 0;
+    animation: fadeZoom 1.3s ease forwards;
+}
+
+@keyframes fadeZoom {
+    0% { opacity: 0; transform: scale(0.8) translateY(20px); }
+    100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.hero-content h1:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.btn1 {
+    background-color: #c71922;
+    border: none;
+    padding: 10px 25px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn1:hover {
+    background-color: #0d0d0d;
+    color: #c71922;
+    transform: translateY(-3px);
+}
